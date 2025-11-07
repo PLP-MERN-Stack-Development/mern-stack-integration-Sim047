@@ -71,11 +71,10 @@ App runs at: `http://localhost:5173`
 
 ## Screenshots
 
-<img src="./screenshots/posts-list.png" alt="Posts List" width="600"/>
+<img src="./screenshots/create-post.png" alt="Posts List" width="600"/>
 <img src="./screenshots/single-post.png" alt="Single Post" width="600"/>
 <img src="./screenshots/login.png" alt="Login" width="600"/>
-<img src="./screenshots/create-post.png" alt="Create Post" width="600"/>
-<img src="./screenshots/pagination.png" alt="Pagination" width="600"/>
+
 
 ---
 
