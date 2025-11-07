@@ -1,99 +1,108 @@
-Here’s a **condensed README** version suitable for quick submission while covering all the key requirements:
 
-````markdown
-# MERN Blog Assignment
+# MERN Blog — Single Page CRUD
 
-Full-stack **MERN blog** with JWT authentication, file uploads, comments, pagination, and Tailwind CSS UI.
+A simple MERN (MongoDB, Express, React, Node.js) blog application with:
+
+- JWT authentication
+- CRUD operations for posts
+- Image uploads with Multer
+- Categories and comments
+- Tailwind CSS styled UI
+- Pagination
+- React Router navigation
 
 ---
 
 ## Features
 
-- User registration/login (JWT)
-- CRUD posts with featured images (Multer)
-- Pagination & search
-- Add comments
-- Tailwind CSS responsive UI
-- React Router navigation
+- User registration and login (JWT)
+- Create, read, update, delete posts
+- Upload featured images
+- Add and view comments
+- Pagination for posts
+- Responsive design with Tailwind CSS
 
 ---
 
-## Setup
+## Setup Instructions
 
-### 1. Clone
+### 1. Clone the repository
 
 ```bash
 git clone https://github.com/PLP-MERN-Stack-Development/mern-stack-integration-Sim047.git
-cd mern-blog
+cd mern-stack-integration-Sim047
 ````
 
-### 2. Backend
+### 2. Backend Setup
 
 ```bash
 cd server
 npm install
 ```
 
-Create `.env`:
+Create a `.env` file:
 
-```
-PORT=5000
-MONGO_URI=your_mongodb_connection_string
+```env
+MONGO_URI=your_mongodb_atlas_connection_string
 JWT_SECRET=your_jwt_secret
-UPLOAD_DIR=uploads
+UPLOAD_DIR=./uploads
+PORT=5000
 ```
 
-Start server:
+Start the server:
 
 ```bash
 npm run dev
 ```
 
-### 3. Frontend
+Server runs at: `http://localhost:5000`
+
+### 3. Frontend Setup
 
 ```bash
-cd ../client
+cd client
 npm install
-```
-
-Create `.env`:
-
-```
-VITE_API_BASE_URL=http://localhost:5000/api
-```
-
-Start frontend:
-
-```bash
 npm run dev
 ```
+
+App runs at: `http://localhost:5173`
 
 ---
 
-## Usage
+## Screenshots
 
-* Open `http://localhost:5173`
-* Register/login
-* Create, edit, delete posts (if logged in)
-* Search posts, navigate pages, view/add comments
+<img src="./screenshots/posts-list.png" alt="Posts List" width="600"/>
+<img src="./screenshots/single-post.png" alt="Single Post" width="600"/>
+<img src="./screenshots/login.png" alt="Login" width="600"/>
+<img src="./screenshots/create-post.png" alt="Create Post" width="600"/>
+<img src="./screenshots/pagination.png" alt="Pagination" width="600"/>
+
+---
+
+## API Endpoints
+
+* `POST /api/auth/register` — Register user
+* `POST /api/auth/login` — Login user
+* `GET /api/posts` — List posts
+* `GET /api/posts/:id` — Get single post
+* `POST /api/posts` — Create post
+* `PUT /api/posts/:id` — Update post
+* `DELETE /api/posts/:id` — Delete post
+* `POST /api/posts/:id/comments` — Add comment
+
+---
+
+## Technologies
+
+* Frontend: React, React Router, Tailwind CSS, Axios
+* Backend: Node.js, Express, MongoDB, Mongoose, JWT, Multer
 
 ---
 
 ## Notes
 
-* Images stored in `/server/uploads/`
-* JWT token in `localStorage`
-* REST API:
-
-  * `POST /api/auth/register`
-  * `POST /api/auth/login`
-  * `GET/POST/PUT/DELETE /api/posts`
-  * `POST /api/posts/:id/comments`
-
----
-
-## Tech
-
-React, Tailwind, Axios, Node.js, Express, MongoDB, Mongoose, JWT, Multer
+* Logged-in users can create, edit, and delete posts.
+* All users can view posts and comments.
+* Images are served from `/uploads`.
 
 ```
