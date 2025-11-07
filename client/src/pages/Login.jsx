@@ -1,0 +1,5 @@
+
+import React, { useState, useContext } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { AuthContext } from '../context/AuthContext';
+export default function Login(){ const { login } = useContext(AuthContext); const [email,setEmail]=useState(''); const [password,setPassword]=useState(''); const nav=useNavigate(); const handle=async(e)=>{ e.preventDefault(); try{ await login(email,password); nav('/'); }catch(err){ alert('Login failed'); }}; return (<div className='container max-w-md mx-auto'><h2 className='text-xl font-semibold my-4'>Login</h2><form onSubmit={handle} className='space-y-3 bg-white p-4 rounded shadow'><input required value={email} onChange={e=>setEmail(e.target.value)} placeholder='Email' className='w-full border px-3 py-2' /><input required type='password' value={password} onChange={e=>setPassword(e.target.value)} placeholder='Password' className='w-full border px-3 py-2' /><button className='w-full bg-indigo-600 text-white py-2 rounded'>Login</button></form></div>); }

@@ -1,0 +1,1 @@
+# MERN Blog — Final (JWT Auth, Multer, Tailwind, Pagination, Comments)\n\nSee server/ and client/ folders.
