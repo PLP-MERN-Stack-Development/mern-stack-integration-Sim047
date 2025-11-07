@@ -72,7 +72,7 @@ App runs at: `http://localhost:5173`
 ## Screenshots
 
 
-<img src="client/screenshots/single-post.png" alt="home" width="600"/> 
+<img src="client/screenshots/home.png" alt="home" width="600"/> 
 <img src="client/screenshots/login.png" alt="Login" width="600"/>
 <img src="client/screenshots/create-post.png" alt="Create Post" width="600"/>
 
